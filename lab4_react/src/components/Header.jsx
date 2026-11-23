@@ -4,7 +4,7 @@ function Header({ theme, onToggleTheme, onOpenContact }) {
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div>
           <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide">
-            Дорофеєв Матвій
+            Дорофеєв Матвій Ігорович
           </h1>
           <p className="mt-2 text-indigo-200">
             Студент Кібербезпеки{' '}
