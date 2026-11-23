@@ -60,7 +60,7 @@ ul { padding-left: 0; list-style: none; }
 /* ID */
 #main-header {
     background-color: var(--header);
-    color: #ffffff;
+    color: #ee0303;
     padding: 25px;
     border: 1px solid #2a9d8f;
     border-radius: 8px;
