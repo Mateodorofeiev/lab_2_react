@@ -1,0 +1,119 @@
+/* Блокова модель (box-sizing, margin, padding) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Селектори тегів */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f3;
+    color: #1f2d30;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h2 {
+    color: #0b4f55;
+    border-bottom: 2px solid #2a9d8f;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Селектори ID */
+#main-header {
+    background-color: #12343b;
+    color: #ffffff;
+    padding: 25px;
+    border: 1px solid #2a9d8f;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#contact-info {
+    display: flex; /* Flexbox макет */
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Селектори класів */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-layout {
+    display: grid; /* CSS Grid макет */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #d5e0e2;
+    border-radius: 8px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #5b6b6e;
+    font-style: italic;
+}
+
+/* Селектори атрибутів */
+a[target="_blank"] {
+    font-weight: bold;
+}
+
+a[href^="mailto:"] {
+    text-decoration: underline;
+}
+
+#contact-info a {
+    color: #9fd8d4;
+}
+
+/* Псевдокласи */
+#contact-info a:hover {            /* 1. :hover */
+    color: #ffffff;
+}
+
+.card ul li:nth-child(even) {      /* 2. :nth-child */
+    background-color: #f2f8f8;
+}
+
+.card ul li {
+    padding: 6px 8px;
+}
+
+/* Медіазапит для вузьких екранів */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #contact-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

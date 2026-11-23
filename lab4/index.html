@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Матвій Дорофеєв</title>
+    <!-- 1. External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 2. Internal CSS -->
+    <style>
+        .badge {
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 3px 10px;
+            border: 1px solid var(--badge-border);
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header id="main-header">
+            <div class="header-top">
+                <div>
+                    <h1>Дорофеєв Матвій</h1>
+                    <p>Студент Кібербезпеки <span class="badge">Junior Cybersecurity Analyst</span></p>
+                </div>
+                <div class="actions">
+                    <button id="themeBtn" class="btn" type="button">🌙 Нічна тема</button>
+                    <button id="openModalBtn" class="btn" type="button">✉️ Зворотний зв'язок</button>
+                </div>
+            </div>
+            <ul id="contact-info">
+                <li>Телефон: <a href="tel:+380669794736">+380 66 9794736</a></li>
+                <li>Email: <a href="mailto:dorofeevmatvij@gmail.com">dorofeevmatvij@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/Mateodorofeiev" target="_blank">github.com/Mateodorofeiev</a></li>
+            </ul>
+        </header>
+
+        <main class="grid-layout">
+            <section class="card full-width">
+                <h2>Про мене</h2>
+                <p>Мотивований Junior Cybersecurity Analyst. Цікавлюся Linux, C#/Python та мережевою безпекою.</p>
+            </section>
+            <section class="card">
+                <h2>Освіта</h2>
+                <p><strong>Львівська політехніка</strong> — 125 Кібербезпека</p>
+                <p class="date">2025–2029</p>
+            </section>
+            <section class="card">
+                <h2>Мови</h2>
+                <p>Українська (рідна), Англійська (B2)</p>
+            </section>
+            <section class="card full-width">
+                <h2>Навички</h2>
+                <ul>
+                    <li>ОС: Linux (Ubuntu, Fedora, Kali), Windows Server</li>
+                    <li>Мови: Python, C#, Bash</li>
+                    <li>Інструменти: Git, VS Code, Cisco Packet Tracer, Burp Suite</li>
+                    <li>Платформи: TryHackMe, Hack The Box, picoCTF</li>
+                </ul>
+            </section>
+
+            <!-- ЛР4, завдання 2: відгуки з сервера -->
+            <section class="card full-width">
+                <h2>Відгуки роботодавців</h2>
+                <div id="reviews">Завантаження...</div>
+            </section>
+        </main>
+
+        <!-- 3. Inline CSS -->
+        <footer style="text-align: center; margin-top: 30px; padding: 15px; color: var(--muted);">
+            <p>© 2026 Дорофеєв Матвій. Всі права захищено.</p>
+            <!-- ЛР4, завдання 1: дані з localStorage -->
+            <h4>Інформація з localStorage</h4>
+            <ul id="storage"></ul>
+        </footer>
+    </div>
+
+    <!-- ЛР4, завдання 3: модальне вікно -->
+    <dialog id="contactModal">
+        <form method="POST" action="https://formspree.io/f/xkjjpkqp">
+            <h3>Форма зворотного зв'язку</h3>
+            <label>Ім'я <input name="name" required></label>
+            <label>Email <input name="email" type="email" required></label>
+            <label>Телефон <input name="phone" type="tel"></label>
+            <label>Повідомлення <textarea name="message" rows="4"></textarea></label>
+            <button type="submit" class="btn">Надіслати</button>
+        </form>
+        <button id="closeModal" class="btn btn-ghost" type="button">Закрити</button>
+    </dialog>
+</body>
+</html>
