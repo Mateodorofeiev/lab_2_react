@@ -17,7 +17,7 @@
 
 /* Нічна тема: перевизначаємо змінні */
 body.dark-mode {
-    --page: #0d1517;
+    --page: #7700ff;
     --text: #dbe5e7;
     --card: #16252a;
     --card-border: #2b3f45;
